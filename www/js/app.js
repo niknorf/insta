@@ -14,13 +14,12 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
 })
 
-
 .config(function() {
   //Set platform UI to android
   ionic.Platform.setPlatform('ios');
 })
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $http) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -33,6 +32,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       StatusBar.styleDefault();
     }
   });
+
+  $http.get("https://desolate-cliffs-78947.herokuapp.com/samplepost").then(function(res){
+    $rootScope.posts=res.data;
+  });
+
 })
 
 /*

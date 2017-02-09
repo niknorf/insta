@@ -48,22 +48,101 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('UserCtrl', function(){
-	$this.users = instuser;
-})
+.controller('UsersProfilesCtrl', ['$scope', function($scope){
+	$scope.users = users_info;
+}])
 
-var instuser = [{
+.controller('UsersPostsCtrl', ['$scope', function($scope){
+	$scope.posts = stuff;
+
+	var hasLiked = false;
+
+	$scope.likes = function(post) {
+		if (hasLiked === false) {
+			post.likes +=1;
+			hasLiked = true;
+		}
+		else {
+			post.likes -=1;
+			hasLiked = false;
+		}
+	};
+}])
+
+var users_info = [{
 	nickname: 'joshua',
 	avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
 	qposts: 123,
 	qfollowers: 321,
 	qfollowing: 325,
-	images: [
-		"http://placehold.it/150x150",
-		"http://placehold.it/150x150",
-		"http://placehold.it/150x150",
-		"http://placehold.it/150x150",
-		"http://placehold.it/150x150",
-		"http://placehold.it/150x150"
-	]}
+	images: "img/FF4fMaKHQEeP0OnKvDRn_3.jpg"
+	},
+
+	{
+	nickname: 'joshua',
+	avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	qposts: 123,
+	qfollowers: 321,
+	qfollowing: 325,
+	images: "img/FF4fMaKHQEeP0OnKvDRn_3.jpg"
+	},
+
+	{
+	nickname: 'joshua',
+	avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	qposts: 123,
+	qfollowers: 321,
+	qfollowing: 325,
+	images: "img/FF4fMaKHQEeP0OnKvDRn_3.jpg"
+	}
 ];
+
+var stuff = [{
+	author: 'kevin',
+	author_avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	post_image: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	post_comment: 'Just look at this!',
+	likes: 0,
+	comments: [{
+		comm_author: 'jake',
+		comm: 'This is awesome, bro!'
+	},  {
+		comm_author: 'tom',
+		comm: 'I cant believe it!'
+	}, {
+		comm_author: 'james',
+		comm: 'You just made my day dude'
+	}]
+	}, {
+	author: 'james',
+	author_avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	post_image: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	post_comment: 'Coooooooooooool',
+	likes: 0,
+	comments: [{
+		comm_author: 'jake',
+		comm: 'This is awesome, bro!'
+	},  {
+		comm_author: 'tom',
+		comm: 'I cant believe it!'
+	}, {
+		comm_author: 'james',
+		comm: 'You just made my day dude'
+	}]
+	}, {
+	author: 'givi',
+	author_avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	post_image: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	post_comment: 'Just look at this!',
+	likes: 0,
+	comments: [{
+		comm_author: 'jake',
+		comm: 'This is awesome, bro!'
+		},  {
+		comm_author: 'tom',
+		comm: 'I cant believe it!'
+		}, {
+		comm_author: 'james',
+		comm: 'You just made my day dude'
+		}]
+}];

@@ -7,49 +7,13 @@
       </label>
     </form>
 
-<ion-grid class="searchphotos" ng-controller="UserCtrl as user">
-  <ion-row nr-repeat="image in users.images">
-    <ion-col width-33><a href="#"><img ng-src="{{image}}"></a></ion-col>
-  </ion-row>
-   <!--  <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-
-    <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-
-    <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-
-    <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col width-33><a href="#"><img src="http://placehold.it/127x127"></a></ion-col>
-  </ion-row> -->
-</ion-grid>
+<div class="searchphotos" ng-controller="UsersProfilesCtrl as profiles">
+    <div class="row">
+      <div class="col col-33" ng-repeat="user in users">
+        <a href="#"><img ng-src="{{user.images}}" style="position: relative; display: inline-block; float: left; width: 100%; height: auto; margin-left: auto; margin-right: auto;"></a>
+      </div>
+    </div>  
+</div>
 
   </ion-content>
 </ion-view>
