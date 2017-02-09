@@ -47,4 +47,23 @@ function ($scope, $stateParams) {
 
 
 }])
- 
+
+.controller('UserCtrl', function(){
+	$this.users = instuser;
+})
+
+var instuser = [{
+	nickname: 'joshua',
+	avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
+	qposts: 123,
+	qfollowers: 321,
+	qfollowing: 325,
+	images: [
+		"http://placehold.it/150x150",
+		"http://placehold.it/150x150",
+		"http://placehold.it/150x150",
+		"http://placehold.it/150x150",
+		"http://placehold.it/150x150",
+		"http://placehold.it/150x150"
+	]}
+];
