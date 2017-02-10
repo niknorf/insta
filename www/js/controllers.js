@@ -180,7 +180,7 @@ var users_info = [{
 	},
 
 	{
-	nickname: 'joshua',
+	nickname: 'kevin',
 	avatar: 'img/FF4fMaKHQEeP0OnKvDRn_3.jpg',
 	qposts: 123,
 	qfollowers: 321,

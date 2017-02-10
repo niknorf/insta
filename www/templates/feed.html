@@ -6,11 +6,15 @@
         <h2>{{post.author}}</h2>
         <i class="icon ion-android-more-vertical"></i>
       </ion-item>
+
+
+
+
       <div class=" item item-image">
         <img ng-src="{{picture}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
       </div>
       <button id="feed-button12" class="button button-light  icon ion-ios-heart-outline" ng-click="likes(post)"> {{post.likes}}</button>
-      <button id="feed-button13" class="button button-light  icon ion-ios-chatbubble-outline"> {{post.comments.length}}</button>
+      <button id="feed-button13" class="button button-light  icon ion-ios-chatbubble-outline"> <!-- {{post.comments.length}} --></button>
       <div id="feed-markdown9" class="show-list-numbers-and-dots">
         <p style="margin-top:0px;color:#000000;">
           <strong>&nbsp; {{post.author}}</strong> {{post.post_comment}}</p>
