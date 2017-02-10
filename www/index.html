@@ -12,6 +12,8 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -57,6 +59,14 @@
     <script src="js/directives.js"></script>
      
     <script src="js/services.js"></script>
+
+    
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/angular-moment/angular-moment.js"></script>
+
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
+
+   
     
 
     <!-- Only required for Tab projects w/ pages in multiple tabs 
@@ -64,7 +74,7 @@
     -->
 
   </head>
-  <body ng-app="app" animation="slide-left-right-ios7">
+  <body ng-app="app" animation="slide-left-right-ios7" ng-controller="mainCtrl">
   <div>
   <div>
     <ion-nav-bar class="bar-stable">

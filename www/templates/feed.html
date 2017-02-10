@@ -7,7 +7,7 @@
         <i class="icon ion-android-more-vertical"></i>
       </ion-item>
       <div class=" item item-image">
-        <img ng-src="{{post.post_image}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        <img ng-src="{{picture}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
       </div>
       <button id="feed-button12" class="button button-light  icon ion-ios-heart-outline" ng-click="likes(post)"> {{post.likes}}</button>
       <button id="feed-button13" class="button button-light  icon ion-ios-chatbubble-outline"> {{post.comments.length}}</button>
@@ -22,5 +22,6 @@
       </form>
       
     </div>
+
   </ion-content>
 </ion-view>
